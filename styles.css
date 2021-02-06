@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root{
+    --pink: hsl(322, 100%, 66%);
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+    --heading: 'Poppins', sans-serif;
+    --body-cta: 'Open Sans', sans-serif;
+    --padding-width: 5.5vw;
+    --padding-body: 9vw;
+    --section-margin: 8rem;
+}
+body{
+    margin: 0;
+    font-size: 18px;
+    font-family: var(--body-cta);
+    color: var(--grayish-blue);
+}
+.heading{
+    font-family: var(--heading);
+    font-weight: 600;
+    color: var(--very-dark-cyan);
+}
+.head{
+    padding: 2rem var(--padding-width);
+    background: var(--very-pale-cyan) url("./images/bg-hero-desktop.svg") no-repeat;
+    background-size: contain;
+}
+.section-1{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 80%;
+}
+.button-try-free{
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 0.75rem 4rem;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 0 2px 2px 2px hsla(192, 100%, 9%, 0.02),
+                0 4px 4px 4px hsla(192, 100%, 9%, 0.02),
+                0 8px 8px 8px hsla(192, 100%, 9%, 0.02);
+}
+.section-2{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.image-mockups{
+    height: 0;
+    padding-top: 71.40%;
+    background: url("./images/illustration-mockups.svg") no-repeat;
+    background-size: cover;
+}
+.section-2 .content .heading{
+    font-size: 2.25em;
+}
+.button-get-started{
+    cursor: pointer;
+    font-size: 0.8em;
+    width: 18rem;
+    padding: 1rem 0;
+    margin: 2rem 0;
+    text-align: center;
+    background-color: var(--pink);
+    border-radius: 35px;
+    color: var(--very-pale-cyan);
+}
+.button-get-started:hover{
+    opacity: 0.7;
+}
+.features{
+    padding: var(--section-margin) var(--padding-body);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.feature{
+    padding: 4rem 8rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 8px hsla(192, 100%, 9%, 0.02);
+}
+.feature .image-illustration{
+    width: 100%;
+}
+.feature .content .heading{
+    margin: 0;
+    font-size: 1.5em;
+}
+.feature:nth-child(2) .image-illustration{
+    grid-area: 1/1/1/1;
+}
+.section-3{
+    width: calc(67% - 2 * var(--padding-body));
+    padding: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 8px hsla(192, 100%, 9%, 0.02);
+    position: relative;
+    top: 7rem;
+}
+.section-3 .heading{
+    font-size: 1.75em;
+}
+.section-3 .button-get-started{
+    margin: auto;
+    padding: 1.75rem 0;
+    width: 25rem;
+    font-size: 1.2em;
+    border-radius: 50px;
+
+}
+.footer{
+    background-color: var(--very-dark-cyan);
+    color: var(--very-pale-cyan);
+    padding: 12rem var(--padding-body) 3rem;
+}
+.footer .logo{
+    width: 20%;
+}
+.footer .details{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer .details .contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer .details .contact-details div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.contact-details div p{
+    margin: 0;
+}
+.footer .details .links{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template: repeat(3, auto) / repeat(2, auto);
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.footer .details .links .link{
+    margin: 0;
+    width: fit-content;
+    cursor: pointer;
+}
+.footer .details .links .link:hover{
+    text-decoration: underline;
+}
+.footer .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.footer .social-media .icon{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    font-size: 1em;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid var(--grayish-blue);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .social-media .icon:hover{
+    color: var(--pink);
+    border-color: var(--pink);
+}
+.copyright{
+    font-size: 0.7em;
+    text-align: right;
+}
